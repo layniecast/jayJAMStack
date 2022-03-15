@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="icon" type="image/x-icon" href="/img/myfaveicon.png" />
+    <title>{{ site.siteTitle }}</title>
+  </head>
+
+  <body class="{{ pageClass }}">
+    <nav aria-label="Primary navigaton">
+      <ul>
+        {% for page in collections.page %}
+        <li>
+          <a href="{{ page.url | url }}">{{ page.data.navTitle }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+    </nav>
+
+    <header>
+      <img src="/img/banner.png" />
+    </header>
+
+    <main tabindex="-1" class="content">
+      <h1>{{ pageTitle }}</h1>
+      {{ content }}
+    </main>
+
+    <script src="/js/scripts_1.js"></script>
+    <script src="/js/scripts.js"></script>
+    <script type="text/javascript">
+      var divElement = document.getElementById("viz1646886576287");
+      var vizElement = divElement.getElementsByTagName("object")[0];
+      if (divElement.offsetWidth > 800) {
+        vizElement.style.width = "1200px";
+        vizElement.style.height = "5987px";
+      } else if (divElement.offsetWidth > 500) {
+        vizElement.style.width = "1200px";
+        vizElement.style.height = "5987px";
+      } else {
+        vizElement.style.width = "100%";
+        vizElement.style.height = "3227px";
+      }
+      var scriptElement = document.createElement("script");
+      scriptElement.src =
+        "https://public.tableau.com/javascripts/api/viz_v1.js";
+      vizElement.parentNode.insertBefore(scriptElement, vizElement);
+    </script>
+
+    <footer>
+      <div class="footer">
+        © 2022 | Made by Laynie with lots of love 🤍 and
+        <a href="https://www.11ty.dev">Eleventy</a>
+      </div>
+    </footer>
+  </body>
+</html>
