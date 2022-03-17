@@ -1,27 +1,28 @@
 body {
-  background-color: #1d2731;
+  background-color: #3c3c3c;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   color: rgb(247, 239, 239);
   font-size: 100%;
   max-width: 1200px;
+  height: 100%;
   margin: 0 auto;
 }
 
 img {
   width: 100%;
-  border-radius: 10%;
+  border-radius: 5%;
 }
 
 a {
   text-decoration: none;
-  color: #985e6d;
+  color: #626e60;
   font-size: 1.5rem;
   font-weight: bold;
 }
 
 .footer a {
-  color: #985e6d;
+  color: #626e60;
 }
 
 header {
@@ -29,9 +30,8 @@ header {
   flex-direction: row;
   padding: 0;
   margin: 0;
-  background-color: #985e6d;
-  justify-content: space-around;
-  text-align: center;
+  background-color: #626e60;
+  text-align: right;
 }
 
 nav ul {
@@ -40,7 +40,7 @@ nav ul {
   padding: 0;
   margin: 0;
   list-style: none;
-  background-color: #985e6d;
+  background-color: #626e60;
   justify-content: space-around;
   text-align: center;
 }
@@ -59,7 +59,7 @@ nav a:hover {
 }
 
 nav li:hover:not(.active) {
-  background-color: #726e72;
+  background-color: #3f3d3f;
 }
 
 nav .active {
@@ -76,8 +76,6 @@ nav .active a {
   padding: 1rem;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  border-left: 2px solid #f4f7f86e;
-  border-radius: 4px;
 }
 
 .homelinks {
@@ -87,8 +85,8 @@ nav .active a {
 button {
   border: none;
   padding: 0.5rem 1rem;
-  background: #985e6d;
-  color: #494e6b;
+  background: #626e60;
+  color: #1d2731;
   border-radius: 4px;
   font-size: 1.5rem;
 }
@@ -124,13 +122,13 @@ button {
 
 /* Style all font awesome icons */
 .fa {
-  padding: 40px;
+  padding: 30px;
   font-size: 30px;
   width: 50px;
   text-align: center;
   text-decoration: none;
   margin: 5px 2px;
-  border-radius: 30%;
+  border-radius: 20%;
 }
 
 /* Add a hover effect if you want */
@@ -141,6 +139,11 @@ button {
 /* Set a specific color for each brand */
 
 /* Facebook */
+.fa-facebook {
+  background: #3b5998;
+  color: white;
+}
+/* LinkedIn */
 .fa-linkedin {
   background: #3b5998;
   color: white;
@@ -152,12 +155,6 @@ button {
   color: white;
 }
 
-/* GitHub */
-.fa-github {
-  background: #696b6b;
-  color: white;
-}
-
 /* SnapChat */
 .fa-snapchat {
   background: #f1c30b;
@@ -166,19 +163,8 @@ button {
 
 /* Instagram */
 .fa-instagram {
-  background: #f81b95;
+  background: #9112cc;
   color: white;
-}
-
-.gr_grid_container {
-  width: 1200px;
-}
-
-.gr_grid_book_container {
-  float: left;
-  width: 150px;
-  height: 220px;
-  padding: 0px 0px;
 }
 
 .footer {
@@ -212,7 +198,7 @@ textarea {
 button {
   padding: 6px;
   border: 1px solid rgb(31, 29, 29);
-  background-color: #985e6d;
+  background-color: #626e60;
   color: #f7f8fc;
   cursor: pointer;
 }
@@ -237,30 +223,8 @@ textarea:focus:invalid {
   background-color: lighten(rgb(252, 3, 3), 40%);
 }
 
-img[alt="Chili Ingredients1"] {
-  width: 350px;
-}
-
-img[alt="Chili Ingredients2"] {
-  width: 350px;
-}
-
-img[alt="Chili Ingredients3"] {
-  width: 350px;
-}
-
-img[alt="Chili Ingredients4"] {
-  width: 350px;
-}
-
-img[alt="Chili Ingredients5"] {
-  width: 350px;
-  height: 350px;
-}
-
-img[alt="Chili Ingredients7"] {
-  width: 350px;
-  height: 350px;
+img[alt="image1"] {
+  width: 100px;
 }
 
 @media (max-width: 468px) {
@@ -277,16 +241,115 @@ img[alt="Chili Ingredients7"] {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    background: #985e6d;
+    background: #626e60;
     text-align: center;
   }
-  .gr_grid_container {
-    display: grid;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1200px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: rgb(26, 24, 24);
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(92, 89, 89, 0.8);
+}
+
+/* Caption text */
+.text {
+  color: #030303;
+  font-size: 20px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #030303;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
   }
-  .gr_grid_book_container {
-    float: center;
-    width: 150px;
-    height: 220px;
-    padding: 0px 0px;
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
   }
 }

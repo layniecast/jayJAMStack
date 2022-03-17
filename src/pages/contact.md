@@ -4,11 +4,12 @@ pageTitle: Contact
 navTitle: Contact
 tags: page
 pageClass: contact
+image1: /img/IMG-0404.jpg
 ---
 
-### Have a question about my website, or just want to say hi? Feel free to reach out!
+![guy at work]({{image1}})
 
-<form action="/" data-netlify="true">
+<form action="/" data-netlify="true" onsubmit="myFunction()">
 <fieldset>
   <label for="fname">First Name:</label><br>
   <input 
@@ -22,17 +23,7 @@ pageClass: contact
   />
   <br>
   <br>
-  <label for="lname">Last Name:</label><br>
-  <input 
-  type="text" 
-  id="lname" 
-  name="lname" 
-  placeholder="Last Name" 
-  required autocomplete="lname" 
-  title="Please enter your name."
-  />
-  <br><br>
-  <label for="email">Your e-mail:</label>
+  <label for="email">E-mail:</label>
 <input 
 type="email" 
 id="email" 
@@ -48,7 +39,7 @@ required
 <textarea 
 name="message" 
 id="message" 
-placeholder="Your message goes here!" 
+placeholder="Shout outs" 
 rows="4" 
 required
 ></textarea>
@@ -59,6 +50,6 @@ required
   </fieldset>
 </form>
 
-### Or if you would like, you can email me at <a href="mailto:emarcast05@gmail.com">Laynie's email</a>.
+### You can email me directly at <a href="mailto:jasoncastillo25@gmail.com">Jay's email</a>.
 
 [Home](/)

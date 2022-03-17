@@ -1,30 +1,20 @@
-document.addEventListener("click", clickHandlers);
+var slideIndex = 0;
+showSlides();
 
-var API =
-  "https://api.nytimes.com/svc/topstories/v2/books.json?api-key=fAh4XL5jPZroaNgsKVFqM0Xuwx4uQGMM";
-
-function clickHandlers(event) {
-  if (!event.target.matches("button")) return;
-  fetch(API)
-    .then((response) => response.json())
-    .then((data) => showData(data.results));
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {
+    slideIndex = 1;
+  }
+  slides[slideIndex - 1].style.display = "block";
+  setTimeout(showSlides, 6000); // Change image every 2 seconds
 }
 
-function showData(stories) {
-  var looped = stories
-    .map(
-      (story) => `
-    <div class="item">
-    <picture>
-    <img src="${story.multimedia[2].url}" alt="" />
-    <caption>${story.multimedia[2].caption}</caption>
-    </picture>
-      <h3><a href="${story.url}">${story.title}</a></h3>
-      <p>${story.abstract}</p>
-    </div>
-  `
-    )
-    .join("");
-
-  document.querySelector(".stories").innerHTML = looped;
+function myFunction() {
+  alert("The form was submitted");
 }
